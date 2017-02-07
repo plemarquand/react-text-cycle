@@ -18,7 +18,7 @@
     "test": "mocha-webpack --webpack-config webpack.config.js \"src/**/*.test.jsx\" --require test/setup.js",
     "test:watch": "npm run test -- --reporter min --watch"
   },
-  "repository": "",
+  "repository": "https://github.com/plemarquand/react-text-cycle",
   "keywords": [
     "react",
     "react-component",
