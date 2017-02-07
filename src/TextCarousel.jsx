@@ -124,8 +124,4 @@ TextCarousel.defaultProps = {
   }
 };
 
-
-export const styles = s;
-export const AnimContainer = AnimationContainer;
-
 export default TextCarousel;

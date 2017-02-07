@@ -4,11 +4,11 @@ import createMockRaf from 'mock-raf';
 import {expect} from 'chai';
 import {useFakeTimers} from 'sinon';
 import {shallow, mount} from 'enzyme';
-import TextCarousel, {AnimContainer} from './TextCarousel';
+import TextCarousel, {AnimationContainer} from './TextCarousel';
 
 const mockRaf = createMockRaf();
 const multipleTestItems = ['One', 'Two', 'Three'];
-const visibleElement = (wrapper) => wrapper.find(AnimContainer).first();
+const visibleElement = (wrapper) => wrapper.find(AnimationContainer).first();
 
 describe('TextCarousel', () => {
   let clock;
