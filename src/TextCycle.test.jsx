@@ -4,13 +4,13 @@ import createMockRaf from 'mock-raf';
 import {expect} from 'chai';
 import {useFakeTimers} from 'sinon';
 import {shallow, mount} from 'enzyme';
-import TextCarousel, {AnimationContainer} from './TextCarousel';
+import TextCycle, {AnimationContainer} from './TextCycle';
 
 const mockRaf = createMockRaf();
 const multipleTestItems = ['One', 'Two', 'Three'];
 const visibleElement = (wrapper) => wrapper.find(AnimationContainer).first();
 
-describe('TextCarousel', () => {
+describe('TextCycle', () => {
   let clock;
   beforeEach(function() {
     clock = useFakeTimers();
@@ -22,14 +22,14 @@ describe('TextCarousel', () => {
   });
 
   it('starts with the first item in the list', () => {
-    const wrapper = shallow(<TextCarousel items={multipleTestItems}/>);
+    const wrapper = shallow(<TextCycle items={multipleTestItems}/>);
 
     expect(visibleElement(wrapper).shallow().text()).to.equal(multipleTestItems[0]);
   });
 
   it('animates to the second item after duration has elapsed', () => {
     const duration = 1000;
-    const wrapper = mount(<TextCarousel items={multipleTestItems} duration={duration}/>);
+    const wrapper = mount(<TextCycle items={multipleTestItems} duration={duration}/>);
 
     clock.tick(duration + 10);
     mockRaf.step();
@@ -38,4 +38,4 @@ describe('TextCarousel', () => {
   });
 });
 
-module.exports = 'TextCarousel';
+module.exports = 'TextCycle';

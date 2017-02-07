@@ -2,7 +2,7 @@ import { Component, PropTypes } from 'react';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import classnames from 'classnames';
-import s from './TextCarousel.css';
+import s from './TextCycle.css';
 
 export function AnimationContainer({ children, animState }) {
   return (
@@ -14,7 +14,7 @@ export function AnimationContainer({ children, animState }) {
   )
 }
 
-class TextCarousel extends Component {
+class TextCycle extends Component {
   timeout: number;
   animTimeout: number;
   refs: {
@@ -101,7 +101,7 @@ class TextCarousel extends Component {
   }
 }
 
-TextCarousel.propTypes = {
+TextCycle.propTypes = {
   items: PropTypes.arrayOf(PropTypes.node).isRequired,
   duration: PropTypes.number,
   animationStates: PropTypes.shape({
@@ -114,7 +114,7 @@ TextCarousel.propTypes = {
   textClassName: PropTypes.string
 };
 
-TextCarousel.defaultProps = {
+TextCycle.defaultProps = {
   duration: 3000,
   animationStates: {
     inStart: s.inStart,
@@ -124,4 +124,4 @@ TextCarousel.defaultProps = {
   }
 };
 
-export default TextCarousel;
+export default TextCycle;

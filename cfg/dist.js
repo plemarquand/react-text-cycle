@@ -20,7 +20,7 @@ let reactDOMExternal = {
 };
 
 let config = Object.assign({}, baseConfig, {
-  entry: path.join(__dirname, '../src/TextCarousel.jsx'),
+  entry: path.join(__dirname, '../src/TextCycle.jsx'),
   cache: false,
   devtool: 'sourcemap',
   plugins: [

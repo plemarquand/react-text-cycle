@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { storiesOf } from '@kadira/storybook';
-import TextCarousel from './TextCarousel';
+import TextCycle from './TextCycle';
 
 const oneItem = ['So Lonely'];
 const twoItems = ['One', 'Two-Dozen', 'Three-Dozen-Dozen'];
 const demoItems = ['Friends', 'Family', 'Strangers', 'Weird Uncles']
 const reactElements = [<h1>One</h1>, <h2>Two</h2>, <h3>Three</h3>];
 
-storiesOf('TextCarousel', module)
+storiesOf('TextCycle', module)
   .addStyles(`
     .container {
       display: flex;
@@ -42,37 +42,37 @@ storiesOf('TextCarousel', module)
   `)
   .add('basic', () => (
     <div className="container">
-      <TextCarousel items={twoItems} />
+      <TextCycle items={twoItems} />
     </div>
   ))
   .add('custom className', () => (
     <div className="container">
-      <TextCarousel className="large" items={twoItems} />
+      <TextCycle className="large" items={twoItems} />
     </div>
   ))
   .add('custom bgClassName', () => (
     <div className="container">
-      <TextCarousel className="large" bgClassName="bg" items={twoItems} />
+      <TextCycle className="large" bgClassName="bg" items={twoItems} />
     </div>
   ))
   .add('one item', () => (
     <div className="container">
-      <TextCarousel items={oneItem} />
+      <TextCycle items={oneItem} />
     </div>
   ))
   .add('no items', () => (
     <div className="container">
-      <TextCarousel items={[]} />
+      <TextCycle items={[]} />
     </div>
   ))
   .add('react elements', () => (
     <div className="container">
-      <TextCarousel items={reactElements} />
+      <TextCycle items={reactElements} />
     </div>
   ))
   .add('demo gif', () => (
     <div className="demo">
       <h1 className="large bg title">Our app is perfect for</h1>
-      <TextCarousel className="large" bgClassName="bg" items={demoItems} />
+      <TextCycle className="large" bgClassName="bg" items={demoItems} />
     </div>
-  )).autoTest(() => require('./TextCarousel.test.jsx'));
+  )).autoTest(() => require('./TextCycle.test.jsx'));
