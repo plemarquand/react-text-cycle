@@ -26,7 +26,7 @@ function getDefaultModules() {
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader?modules&localIdentName=[name]_[local]'
-      },
+      }
     ]
   };
 }

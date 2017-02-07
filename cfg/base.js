@@ -1,13 +1,16 @@
 'use strict';
 let path = require('path');
 let defaultSettings = require('./defaults');
+let pkg = require('../package.json');
 
 module.exports = {
   devtool: 'eval',
   output: {
     path: path.join(__dirname, '/../dist'),
     filename: 'index.js',
-    publicPath: defaultSettings.publicPath
+    publicPath: defaultSettings.publicPath,
+    libraryTarget: 'umd',
+    library: pkg.name
   },
   devServer: {
     contentBase: './src/',
@@ -20,12 +23,6 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
-      actions: `${defaultSettings.srcPath}/actions/`,
-      components: `${defaultSettings.srcPath}/components/`,
-      sources: `${defaultSettings.srcPath}/sources/`,
-      stores: `${defaultSettings.srcPath}/stores/`,
-      styles: `${defaultSettings.srcPath}/styles/`,
-      config: `${defaultSettings.srcPath}/config/` + process.env.REACT_WEBPACK_ENV,
       'react/lib/ReactMount': 'react-dom/lib/ReactMount'
     }
   },
