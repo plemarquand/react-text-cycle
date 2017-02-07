@@ -24,3 +24,9 @@ Time in between titles, in milliseconds. This does not include the duration of t
 Class name transferred to the top level element in the component. Use this for styling the text.
 #### `bgClassName` - String (optional)
 Class name for the background element that sits behind the text.
+#### animationStates - Object  (optional)
+Allows for customization of the in and out animations.
+* `inStart` String - class name for the initial state of the animation. This class should not have a `transition` property defined.
+* `in`:  String - class name for final state of the in animation. This class *should* have a `transition` property defined.
+* `outStart`:  String - class name for the final out state of the animation. This class should not have a `transition` property defined.
+* `out`:  String - class name for final state of the out animation. This class *should* have a `transition` property defined.
