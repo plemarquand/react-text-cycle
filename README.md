@@ -11,7 +11,7 @@ React component for cycling between text headings.
 ```jsx
 const items = ['Friends', 'Family', 'Strangers', 'Weird Uncles']; // Required
 const duration = 3000; // The time to wait before rendering the next string
-<TextCarousel items={items} duration={duration} />
+<TextCycle items={items} duration={duration} />
 ```
 
 ## API
