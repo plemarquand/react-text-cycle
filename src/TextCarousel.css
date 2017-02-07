@@ -1,0 +1,70 @@
+.txt {
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.shadowLayout {
+  position: absolute;
+  user-select: none;
+  flex-shrink: 1;
+  flex-grow: 1;
+  height: 0;
+  overflow: hidden;
+}
+
+.animContainer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.verticalSizer {
+  width: 0;
+  overflow-x: hidden;
+}
+
+.animWrapper {
+  -webkit-font-smoothing: antialiased;
+}
+
+.inStart {
+  transition: none;
+  transform: translateY(100px);
+  opacity: 1;
+}
+
+.in {
+  transition: all 1s;
+  transform: translateY(0);
+}
+
+.outStart {
+  transition: none;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.out {
+  transition: transform 1s, opacity 0.3s;
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+.bgContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.bg {
+  flex-grow: 0;
+}
+
+.bgAnim {
+  transition: width 0.5s;
+}
